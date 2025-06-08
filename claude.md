@@ -7,8 +7,8 @@ FibreFlow V2 is a complete rebuild of a fiber optic project management system us
 
 ### Frontend
 - **Framework**: Solid.js + SolidStart (NOT React)
-- **UI Components**: Kobalte (headless) + Park UI or custom Tailwind
-- **Styling**: Tailwind CSS
+- **UI Components**: Park UI (built on Kobalte) - MUST USE PARK UI COMPONENTS
+- **Styling**: Tailwind CSS via Park UI design tokens
 - **State Management**: @tanstack/solid-query, solid-js/store
 - **Build Tool**: Vite
 
@@ -77,6 +77,14 @@ Database Rules
 ❌ NEVER create new Supabase project
 ❌ NEVER delete records permanently
 
+### Park UI Requirements
+✅ MUST use Park UI components from https://park-ui.com/docs
+✅ Install Park UI for Solid: `npm install @park-ui/solid`
+✅ Use Park UI components: Card, Button, Input, etc.
+✅ Follow Park UI examples and patterns
+❌ NEVER create custom Kobalte components when Park UI exists
+❌ NEVER use raw @kobalte/core imports
+
 Core Features
 1. Project Hierarchy
 Projects → Phases → Steps → Tasks
@@ -102,7 +110,7 @@ Component Patterns
 Solid.js Component Example
 typescript// ✅ CORRECT Solid pattern
 import { Component, createSignal, For } from "solid-js";
-import { Card } from "@kobalte/core";
+import { Card } from "~/components/ui/card";
 
 export const ProjectList: Component = () => {
   const [projects] = createResource(fetchProjects);

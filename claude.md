@@ -213,32 +213,39 @@ Deno documentation (not Node)
 Performance over features
 Simplicity over complexity
 
-## Workflow Implementation Priority
+## Frontend-First Implementation Priority
 
-### Phase 1: Core Workflow Engine (Backend)
-1. Implement enhanced database schema from docs/workflow-database-schema.sql
-2. Build WorkflowEngine class with phase progression logic
-3. Create DependencyResolver for task unlocking
-4. Implement auto-assignment system
-5. Add workflow event handlers and audit logging
+### Phase 1: Core Workflow UI (Frontend + UI-Components) - START HERE
+1. Build role-aware MyTasksDashboard component (field techs see assigned only)
+2. Create ClientProgressPortal with high-level project progress
+3. Implement WorkflowManagement interface for PMs (task assignment/dependencies)
+4. Build ProjectOverview with role-based information filtering
+5. Add phase timeline visualization with Park UI components
 
-### Phase 2: Frontend Workflow UI (Frontend + UI-Components)
-1. Build phase timeline visualization component
-2. Create task dependency management interface  
-3. Implement My Tasks dashboard with urgency indicators
-4. Add workflow management pages for admins
-5. Build progress tracking and critical path displays
+### Phase 2: Workflow Logic Integration (Backend)
+1. Create role-based API endpoints (/api/tasks/my-tasks, /api/projects/client-view)
+2. Implement task assignment logic with role fallbacks
+3. Build dependency resolution system (linear + complex dependencies)
+4. Add progress calculation adapted to user roles
+5. Create audit logging for task actions
 
-### Phase 3: Notification System (Backend)
-1. Implement Supabase Edge Functions for notifications
-2. Create daily/weekly email report generation
-3. Add real-time in-app notifications via WebSocket
-4. Build notification preference management
+### Phase 3: Schema Adaptation (Backend)
+1. Adapt existing Projects → Phases → Steps → Tasks to new workflow
+2. Add role permissions and assignment rules tables
+3. Create client visibility controls
+4. Implement notification system with Supabase Edge Functions
 
 ### Key Files to Reference:
-- docs/workflow-database-schema.sql - Complete database schema
-- docs/workflow-engine-architecture.md - Implementation patterns
-- See fixed 5-phase structure: Planning → Design → Implementation → Testing → Deployment
+- docs/refined-workflow-requirements.md - USER-APPROVED requirements and role permissions
+- docs/workflow-engine-architecture.md - Implementation patterns  
+- docs/workflow-database-schema.sql - Database schema (for Phase 3)
+
+### Role-Based Implementation Rules:
+- Field Technicians: Can ONLY view assigned tasks, cannot reassign
+- Clients: See high-level progress only, no individual task details
+- Project Managers: Can reassign within their projects
+- Admins: Can reassign any task
+- Mixed task progression: Some linear, some dependency-based, all role-aware
 
 Remember: This is a PERFORMANCE-FIRST rebuild showcasing modern web technologies with sophisticated workflow management!
 

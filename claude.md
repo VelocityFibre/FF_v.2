@@ -86,21 +86,31 @@ Database Rules
 ❌ NEVER use raw @kobalte/core imports
 
 Core Features
-1. Project Hierarchy
-Projects → Phases → Steps → Tasks
+1. Enhanced Workflow System
+Fixed 5-Phase Structure: Planning → Design → Implementation → Testing → Deployment
+- Parallel execution support (Design/Implementation/Testing can overlap)
+- Complex task dependencies with percentage and milestone triggers
+- Auto-assignment based on roles and rules
+- Critical path analysis and bottleneck identification
 
-Each level has status tracking
-Drag-and-drop reordering
-Real-time updates
+2. Project Hierarchy
+Projects → Phases → Tasks (with flexible dependencies)
+- Each level has status tracking and progress calculation
+- Drag-and-drop reordering with dependency validation
+- Real-time updates via WebSocket events
+- Comprehensive audit trail for all actions
 
-2. Views
+3. Enhanced Views & Dashboards
 
-/projects - Project list with cards
-/projects/[id] - Project detail with hierarchy
-/kanban - Kanban board for tasks
-/gantt - Gantt chart visualization
+/projects - Project list with workflow status and progress
+/projects/[id] - Project detail with phase timeline and task dependencies  
+/projects/[id]/workflow - Workflow management and phase progression
+/tasks/my-tasks - Personal task dashboard with urgency indicators
+/kanban - Drag-and-drop Kanban board with dependency validation
+/gantt - Gantt chart with critical path highlighting
+/admin/workflow - Admin interface for phase/task template management
 
-3. Offline Support
+4. Offline Support
 
 Use Deno KV for offline queue
 Sync when connection restored
@@ -203,6 +213,33 @@ Deno documentation (not Node)
 Performance over features
 Simplicity over complexity
 
-Remember: This is a PERFORMANCE-FIRST rebuild showcasing modern web technologies!
+## Workflow Implementation Priority
+
+### Phase 1: Core Workflow Engine (Backend)
+1. Implement enhanced database schema from docs/workflow-database-schema.sql
+2. Build WorkflowEngine class with phase progression logic
+3. Create DependencyResolver for task unlocking
+4. Implement auto-assignment system
+5. Add workflow event handlers and audit logging
+
+### Phase 2: Frontend Workflow UI (Frontend + UI-Components)
+1. Build phase timeline visualization component
+2. Create task dependency management interface  
+3. Implement My Tasks dashboard with urgency indicators
+4. Add workflow management pages for admins
+5. Build progress tracking and critical path displays
+
+### Phase 3: Notification System (Backend)
+1. Implement Supabase Edge Functions for notifications
+2. Create daily/weekly email report generation
+3. Add real-time in-app notifications via WebSocket
+4. Build notification preference management
+
+### Key Files to Reference:
+- docs/workflow-database-schema.sql - Complete database schema
+- docs/workflow-engine-architecture.md - Implementation patterns
+- See fixed 5-phase structure: Planning → Design → Implementation → Testing → Deployment
+
+Remember: This is a PERFORMANCE-FIRST rebuild showcasing modern web technologies with sophisticated workflow management!
 
 This `claude.md` file will give Claude Code (and Claude Squad instances) clear context about your project, preventing React/Node patterns from creeping in and ensuring consistent, high-performance code! 🚀

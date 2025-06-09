@@ -2,7 +2,6 @@ import { Component, createSignal } from "solid-js"
 import { Card } from "../components/ui"
 import { Button } from "../components/ui"
 import { Input, Select } from "../components/ui"
-import { ThemeSwitcher } from "../components/ui"
 import { Settings, User, Bell, Shield, Palette, Database } from "lucide-solid"
 
 const SettingsPage: Component = () => {
@@ -215,7 +214,11 @@ const SettingsPage: Component = () => {
           <div class="space-y-4">
             <div>
               <label class="ff-label mb-2 block">Theme</label>
-              <ThemeSwitcher />
+              <Select value="system">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="system">System</option>
+              </Select>
             </div>
 
             <div>

@@ -1,0 +1,1 @@
+import{createComponent as r,mergeProps as a}from"solid-js/web";import{I as o}from"./ThemeProvider-a-TiApaf.js";var t=[["path",{d:"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2",key:"975kel"}],["circle",{cx:"12",cy:"7",r:"4",key:"17ys0d"}]],c=e=>r(o,a(e,{name:"User",iconNode:t})),p=c;export{p as u};

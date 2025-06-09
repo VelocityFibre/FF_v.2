@@ -1,0 +1,1 @@
+import{createComponent as n,mergeProps as o}from"solid-js/web";import{I as r}from"./Icon-D6UU8kQ2.js";var p=[["polyline",{points:"22 7 13.5 15.5 8.5 10.5 2 17",key:"126l90"}],["polyline",{points:"16 7 22 7 22 13",key:"kwv8wd"}]],t=e=>n(r,o(e,{name:"TrendingUp",iconNode:p})),d=t;export{d as t};

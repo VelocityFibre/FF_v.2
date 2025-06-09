@@ -1,0 +1,1 @@
+import{createComponent as a,mergeProps as o}from"solid-js/web";import{I as r}from"./Icon-D6UU8kQ2.js";var p=[["path",{d:"M5 12h14",key:"1ays0h"}],["path",{d:"M12 5v14",key:"s699le"}]],t=e=>a(r,o(e,{name:"Plus",iconNode:p})),l=t;export{l as p};

@@ -1,0 +1,1 @@
+import{I as r}from"./ThemeSwitcher-qFUB_xEj.js";import{b as a,k as o}from"./web-DY2gxAax.js";var s=[["path",{d:"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2",key:"975kel"}],["circle",{cx:"12",cy:"7",r:"4",key:"17ys0d"}]],t=e=>a(r,o(e,{name:"User",iconNode:s})),p=t;export{p as u};

@@ -1,0 +1,1 @@
+import{I as o}from"./ThemeSwitcher-qFUB_xEj.js";import{b as r,k as a}from"./web-DY2gxAax.js";var t=[["polygon",{points:"22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3",key:"1yg77f"}]],f=e=>r(o,a(e,{name:"Filter",iconNode:t})),n=f;export{n as f};

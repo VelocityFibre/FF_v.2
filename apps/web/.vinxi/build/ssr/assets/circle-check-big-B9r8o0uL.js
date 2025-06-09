@@ -1,0 +1,1 @@
+import{createComponent as r,mergeProps as c}from"solid-js/web";import{I as a}from"./Icon-D6UU8kQ2.js";var o=[["path",{d:"M21.801 10A10 10 0 1 1 17 3.335",key:"yps3ct"}],["path",{d:"m9 11 3 3L22 4",key:"1pflzl"}]],t=e=>r(a,c(e,{name:"CircleCheckBig",iconNode:o})),m=t;export{m as c};

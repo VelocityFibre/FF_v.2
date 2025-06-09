@@ -13,7 +13,6 @@
     "@solidjs/router": "^0.15.1",
     "@solidjs/start": "^1.0.9",
     "@tanstack/solid-query": "^5.61.3",
-    "@park-ui/solid": "^0.42.0",
     "@ark-ui/solid": "^4.2.1", 
     "solid-js": "^1.9.3",
     "vinxi": "^0.5.4",

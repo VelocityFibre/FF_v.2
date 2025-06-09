@@ -1,12 +1,12 @@
 import { Component, createSignal, createResource, For, Show } from "solid-js"
-import { Card } from "@park-ui/solid/card"
-import { Button } from "@park-ui/solid/button"
-import { Badge } from "@park-ui/solid/badge"
-import { Select } from "@park-ui/solid/select"
-import { Dialog } from "@park-ui/solid/dialog"
-import { Input } from "@park-ui/solid/input"
-import { Textarea } from "@park-ui/solid/textarea"
-import { Progress } from "@park-ui/solid/progress"
+import { Card } from "../ui/card"
+import { Button } from "../ui/button"
+import { Badge } from "../ui/badge"
+import { Select } from "../ui/select"
+import { Dialog } from "../ui/dialog"
+import { Input } from "../ui/input"
+import { Textarea } from "../ui/textarea"
+import { Progress } from "../ui/progress"
 import { 
   Settings, 
   User, 

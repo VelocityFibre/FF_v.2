@@ -1,7 +1,7 @@
 import { Component, createResource, For, Show } from "solid-js"
-import { Card } from "@park-ui/solid/card"
-import { Badge } from "@park-ui/solid/badge"
-import { Progress } from "@park-ui/solid/progress"
+import { Card } from "../ui/card"
+import { Badge } from "../ui/badge"
+import { Progress } from "../ui/progress"
 import { 
   Calendar, 
   CheckCircle, 
@@ -12,7 +12,7 @@ import {
   Mail,
   AlertCircle
 } from "lucide-solid"
-import type { ClientProjectView, ProjectPhase } from "../../../packages/shared/types"
+import type { ClientProjectView, ProjectPhase } from "../../lib/types"
 
 interface ClientProgressPortalProps {
   projectId: string

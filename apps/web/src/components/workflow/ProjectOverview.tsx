@@ -1,8 +1,8 @@
 import { Component, createResource, For, Show, Match, Switch } from "solid-js"
-import { Card } from "@park-ui/solid/card"
-import { Badge } from "@park-ui/solid/badge"
-import { Button } from "@park-ui/solid/button"
-import { Progress } from "@park-ui/solid/progress"
+import { Card } from "../ui/card"
+import { Badge } from "../ui/badge"
+import { Button } from "../ui/button"
+import { Progress } from "../ui/progress"
 import { 
   Calendar, 
   Clock, 
@@ -15,8 +15,7 @@ import {
   Eye,
   Edit
 } from "lucide-solid"
-import type { Project, User as UserType, UserRole, ProjectProgress, TaskWithProject } from "../../../packages/shared/types"
-import { ROLE_PERMISSIONS } from "../../../packages/shared/types"
+import type { Project, User as UserType, UserRole, TaskWithProject } from "../../lib/types"
 
 interface ProjectOverviewProps {
   projectId: string

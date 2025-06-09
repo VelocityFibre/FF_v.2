@@ -1,10 +1,10 @@
 import { Component, createSignal, createResource, For, Show } from "solid-js"
-import { Card } from "@park-ui/solid/card"
-import { Badge } from "@park-ui/solid/badge"
-import { Button } from "@park-ui/solid/button"
-import { Progress } from "@park-ui/solid/progress"
+import { Card } from "../ui/card"
+import { Badge } from "../ui/badge"
+import { Button } from "../ui/button"
+import { Progress } from "../ui/progress"
 import { Calendar, Clock, AlertTriangle, CheckCircle, Play } from "lucide-solid"
-import type { TaskWithProject, User, UserRole } from "../../../packages/shared/types"
+import type { TaskWithProject, User, UserRole } from "../../lib/types"
 
 interface MyTasksDashboardProps {
   currentUser: User

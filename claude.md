@@ -249,4 +249,31 @@ Simplicity over complexity
 
 Remember: This is a PERFORMANCE-FIRST rebuild showcasing modern web technologies with sophisticated workflow management!
 
+## Deployment Configuration
+
+### Railway Deployment
+The project is configured for Railway deployment with monorepo support:
+
+**Root Configuration Files:**
+- `package.json` - Workspace configuration for monorepo structure
+- `railway.json` - Explicit build and deployment instructions
+
+**Key Requirements:**
+- Root-level `package.json` required for Nixpacks to recognize monorepo
+- Build commands navigate to `apps/web/` subdirectory
+- Watch patterns monitor `apps/web/**` for changes
+- Start command runs from correct app directory
+
+**Deployment Commands:**
+```bash
+# Build: cd apps/web && npm ci && npm run build
+# Start: cd apps/web && npm start
+# Health check: / endpoint with 100s timeout
+```
+
+**Common Issues:**
+- Nixpacks failing = missing root package.json
+- Build failures = incorrect build command paths
+- Runtime errors = wrong start command directory
+
 This `claude.md` file will give Claude Code (and Claude Squad instances) clear context about your project, preventing React/Node patterns from creeping in and ensuring consistent, high-performance code! 🚀

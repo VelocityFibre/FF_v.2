@@ -4,7 +4,10 @@
     "builder": "NIXPACKS",
     "buildCommand": "cd apps/web && npm ci && npm run build",
     "watchPatterns": [
-      "apps/web/**"
+      "apps/web/**",
+      "packages/**",
+      "package.json",
+      "railway.json"
     ]
   },
   "deploy": {
